@@ -1,0 +1,149 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.anfix</groupId>
+	<artifactId>anfix-maven-plugin</artifactId>
+	<version>1.0-SNAPSHOT</version>
+	<packaging>maven-plugin</packaging>
+	<name>anfix-maven-plugin</name>
+	<url>http://www.anfix.com</url>
+
+	<scm>
+		<connection>scm:svn:http://labs.anfix.com/svn/anfix-maven-plugin/trunk/</connection>
+		<developerConnection>scm:svn:http://labs.anfix.com/svn/anfix-maven-plugin/trunk/</developerConnection>
+		<url>http://labs.anfix.com/svn/anfix-maven-plugin/trunk/</url>
+	</scm>
+
+	<repositories>
+		<repository>
+			<id>anfix.com</id>
+			<name>Repositorio Intranet Anfix</name>
+			<url>http://labs.anfix.com/artifactory/repo</url>
+		</repository>
+
+		<repository>
+			<id>jmockit-svn</id>
+			<url>http://jmockit.googlecode.com/svn/maven-repo</url>
+			<releases>
+				<checksumPolicy>ignore</checksumPolicy>
+			</releases>
+		</repository>
+
+		<repository>
+			<id>jasper-reports</id>
+			<url>http://repo2.maven.org/maven2</url>
+		</repository>
+	</repositories>
+
+	<distributionManagement>
+		<repository>
+			<id>labs.anfix.com</id>
+			<name>labs.anfix.com-releases</name>
+			<url>http://labs.anfix.com/artifactory/libs-release-local</url>
+		</repository>
+
+		<snapshotRepository>
+			<id>labs.anfix.com</id>
+			<name>labs.anfix.com-snapshots</name>
+			<url>http://labs.anfix.com/artifactory/libs-snapshot-local</url>
+		</snapshotRepository>
+	</distributionManagement>
+
+	<pluginRepositories>
+		<pluginRepository>
+			<id>anfix.com</id>
+			<name>Repositorio Intranet Anfix</name>
+			<url>http://labs.anfix.com/artifactory/repo</url>
+		</pluginRepository>
+	</pluginRepositories>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-resources-plugin</artifactId>
+				<version>2.5</version>
+				<configuration>
+					<encoding>UTF-8</encoding>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-plugin-plugin</artifactId>
+				<version>2.9</version>
+
+				<dependencies>
+					<dependency>
+						<groupId>org.apache.maven.plugin-tools</groupId>
+						<artifactId>maven-plugin-tools-ant</artifactId>
+						<version>2.9</version>
+					</dependency>
+				</dependencies>
+			</plugin>
+		</plugins>
+	</build>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.apache.ant</groupId>
+			<artifactId>ant-nodeps</artifactId>
+			<version>1.8.1</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.ant</groupId>
+			<artifactId>ant-launcher</artifactId>
+			<version>1.8.1</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.maven</groupId>
+			<artifactId>maven-script-ant</artifactId>
+			<version>2.2.1</version>
+		</dependency>
+		<dependency>
+			<groupId>com.dbdeploy</groupId>
+			<artifactId>dbdeploy-core</artifactId>
+			<version>3.0M3</version>
+		</dependency>
+		<dependency>
+			<groupId>com.dbdeploy</groupId>
+			<artifactId>dbdeploy-ant</artifactId>
+			<version>3.0M3</version>
+		</dependency>
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>5.1.15</version>
+		</dependency>
+		<dependency>
+			<groupId>ant-contrib</groupId>
+			<artifactId>ant-contrib</artifactId>
+			<version>1.0b3</version>
+			<exclusions>
+				<exclusion>
+					<groupId>ant</groupId>
+					<artifactId>ant</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		<dependency>
+			<groupId>com.oopsconsultancy</groupId>
+			<artifactId>xmltask</artifactId>
+			<version>1.14</version>
+		</dependency>
+		<dependency>
+			<groupId>slide</groupId>
+			<artifactId>ant-webdav</artifactId>
+			<version>2.1M1</version>
+		</dependency>
+		<dependency>
+			<groupId>slide</groupId>
+			<artifactId>webdavlib</artifactId>
+			<version>2.1M1</version>
+		</dependency>
+		<dependency>
+			<groupId>commons-httpclient</groupId>
+			<artifactId>commons-httpclient</artifactId>
+			<version>3.1</version>
+		</dependency>
+	</dependencies>
+</project>
