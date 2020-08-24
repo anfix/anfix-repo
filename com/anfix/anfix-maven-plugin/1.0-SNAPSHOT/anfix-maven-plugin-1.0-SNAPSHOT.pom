@@ -31,7 +31,7 @@
 
 		<repository>
 			<id>jasper-reports</id>
-			<url>http://repo2.maven.org/maven2</url>
+			<url>https://repo2.maven.org/maven2</url>
 		</repository>
 	</repositories>
 
